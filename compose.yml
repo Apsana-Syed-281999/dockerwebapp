@@ -1,16 +1,16 @@
 ---
-version : "3"
-services :
-  dbimg :
-    container_name : devopsdb
-    build : ./Docker-db
-    ports :
+services:
+  app:
+    image: appimg
+    ports:
+      - "1111:8080"
+    deploy:
+      replicas: 3
+
+  db:
+    image: dbimg
+    ports:
       - "2222:3306"
-
-  appimg :
-    container_name : appcont
-    build : ./Docker-app
-    ports :
-      - "3333:8080"
-
+    deploy:
+      replicas: 3
 ...
