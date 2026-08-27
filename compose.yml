@@ -1,7 +1,7 @@
 ---
 services:
   
-  devopsdb:
+  db:
     image: dbimg
     ports:
       - "2222:3306"
