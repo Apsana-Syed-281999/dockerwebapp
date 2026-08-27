@@ -2,14 +2,14 @@
 services:
   
   devopsdb:
-    image: apsanadevops/myfirstdockerrepo:dbimg
+    image: dbimg
     ports:
       - "2222:3306"
     deploy:
       replicas: 3
   
   app:
-    image: apsanadevops/myfirstdockerrepo:appimg
+    image: appimg
     ports:
       - "1111:8080"
     deploy:
